@@ -14,6 +14,10 @@ import Typography from '@material-ui/core/Typography'; //this is required for th
 import Container from '@material-ui/core/Container'; //containers for MUI
 import Paper from '@material-ui/core/Paper'; //helps in seeing the grid for MUI a bit better
 import Grid from '@material-ui/core/Grid';
+import AppBar from '@material-ui/core/AppBar'; //this is the app bar, which is the bar at the top of the page
+import Toolbar from '@material-ui/core/Toolbar'; //this for the tool bar
+import IconButton from '@material-ui/core/IconButton'; //this for a button with an icon on it
+import MenuIcon from '@material-ui/icons/Menu'; //and this is the actual icon that we need
 
 const useStyles = makeStyles({ //this makes it so that you can simply make calls for stuff that needs to be styled, without the use of css
   root: { //make sure that you add in this root component
@@ -81,9 +85,20 @@ function App() {
     <Container maxWidth='lg' >
     <div className="App">
       <header className="App-header">
+        <AppBar color="secondary"> {/*add in the app bar at the top, and then you can add in the color of the app bar*/}
+          <Toolbar color="primary"> {/*add in the toolbar, and then you can add in the color of the toolbar*/}
+            <IconButton color="primary"> {/*add in the icon button, and then you can add in the color of the icon button*/}
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6"> {/* this specifies what font size we want out menu text to be, an h6 is nice for this one*/}
+              MUI Theming
+            </Typography>
+            <Button>Login</Button>
+          </Toolbar>
+        </AppBar>
         <Typography variant="h2" component="div" >Welcome to MUI</Typography>
         <Typography variant="subtitle1">Learn how to use Material UI</Typography>
-        {/*<ButtonStyled style={{padding: 15}}/>*/}
+        <ButtonStyled style={{padding: 15}}/>
         <TextField
         variant="outlined" //gives it a wrapped look
         outline="outlined" //gives it a border
@@ -94,7 +109,7 @@ function App() {
         ></TextField>
 
         <Grid container spacing={4} justify="center"> {/*this element is the grid container, which specifies grid objects within it, and adds in styling for everything underneath it, pretty useful*/}
-        <Grid item xs={12} xl={6} sm={6} > {/*this is the grid item, which is the actual grid object, and it can be used to specify the size of the grid object, and other things*/}
+        <Grid item > {/*this is the grid item, which is the actual grid object, and it can be used to specify the size of the grid object, and other things*/}
           <Paper style={{height:75, width:'100%',}}></Paper>
         </Grid>
         <Grid item>
