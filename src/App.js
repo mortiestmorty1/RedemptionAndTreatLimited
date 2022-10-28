@@ -60,75 +60,13 @@ const deleteRow = (e) => {
   createData("ONE DROP", 15, "21:00","O+","15/11/22"),
   createData("GOD'S PLAN", 7, "21:00","O+","30/01/23")
  ];
+}
 
+const App = () => {
+  return (
 
-class App extends React.Component() {
-  constructor(){
-    super()
-
-    this.state = {
-      bloodbank:'',
-    patientNO: '',
-    time: '',
-    bloodgroup:'' ,
-    date: '',
-    safe: []
-    }
-  }
-  render()
-    {
-      return ( 
-        <render/>
-      //   <ThemeProvider theme={theme}> {/*this is how you use the theme provider, and then you can call the theme within the theme provider*/} {/*btw is you're wondering what's up with the curly braces, then in the return component of this, you can only comment like this, otherwise it'll show up in the website */}  
-      //   <Container maxWidth='lg' >
-      //   <div className="App">
-      //     <header className="App-header">
-      //       <AppBar color="secondary"> {/*add in the app bar at the top, and then you can add in the color of the app bar*/}
-      //         <Toolbar color="primary"> {/*add in the toolbar, and then you can add in the color of the toolbar*/}
-      //           <IconButton color="primary"> {/*add in the icon button, and then you can add in the color of the icon button*/}
-      //             <MenuIcon />
-      //           </IconButton>
-      //           <Typography variant="h6"> {/* this specifies what font size we want out menu text to be, an h6 is nice for this one*/}
-      //             APPOINTMENTS
-      //           </Typography>
-      //         </Toolbar>
-      //       </AppBar>
-      //       <Typography variant="h10" component="div" >
-      //       <TableContainer>
-      //     <Table aria-label="simple table">
-      //       <TableHead>
-      //         <TableRow>
-      //           <TableCell>BLOODBANK</TableCell>
-      //           <TableCell align="right">PATIENT NO</TableCell>
-      //           <TableCell align="right">TIME</TableCell>
-      //           <TableCell align="right">BLOOD GROUP</TableCell> 
-      //           <TableCell align="right">DATE</TableCell>
-      //           <TableCell align="right"> OPTIONS</TableCell>
-      //         </TableRow>
-      //       </TableHead>
-      //       <TableBody>
-      //         {rows.map((row) => (
-      //           <TableRow key={row.number}>
-      //             <TableCell>{row.bloodbank}</TableCell>
-      //             <TableCell align="right">{row.patientNO}</TableCell>
-      //             <TableCell align="right">{row.TIME}</TableCell>
-      //             <TableCell align="right">{row.bloodgroup}</TableCell>
-      //             <TableCell align="right">{row.date}</TableCell>
-      //             <ButtonStyled align="right" style={{padding: 15}} onClick={deleteRow(row.number)}/>
-      //           </TableRow>
-      //         ))}
-      //       </TableBody>
-      //     </Table>
-      //   </TableContainer>
-      
-      //   </Typography>
-      //     </header>
-      //   </div>
-      //   </Container>
-      //   </ThemeProvider>
-      );
-    }
-  }
+    <render/>
+  );
 }
 
 export default App;
