@@ -1,0 +1,8 @@
+https://localhost:4000/postmydatalol
+
+{   bloodbank: String,
+    patientNO: Number,
+    time: String,
+    bloodgroup: String,
+    date: String
+}
