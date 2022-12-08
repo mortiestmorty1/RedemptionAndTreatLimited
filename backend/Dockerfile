@@ -1,5 +1,5 @@
 FROM node:current-alpine 
-WORKDIR /app
+WORKDIR /backend/model_server
 
 COPY package*.json ./
 RUN npm install
